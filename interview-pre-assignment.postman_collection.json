@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "902f5383-3e8d-4f02-a832-90dabef3e601",
+		"name": "interview-pre-assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19441483"
+	},
+	"item": [
+		{
+			"name": "getVehicleInfomation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8989/getVehicleInfomation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8989",
+					"path": [
+						"getVehicleInfomation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getVehicleModelName/{modelName}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8989/getVehicleModelName/Edge",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8989",
+					"path": [
+						"getVehicleModelName",
+						"Edge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getVehicleModelName/{modelName} - VehicleNotFoundException",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8989/getVehicleModelName/Aerostar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8989",
+					"path": [
+						"getVehicleModelName",
+						"Aerostar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getVehicleByFeatures/{exterior}/{interior}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8989/getVehicleByFeatures/Lights/Sunvisors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8989",
+					"path": [
+						"getVehicleByFeatures",
+						"Lights",
+						"Sunvisors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getVehicleByFeatures/{exterior}/{interior} - VehicleNotFoundException",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8989/getVehicleByFeatures/Everything/Loaded",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8989",
+					"path": [
+						"getVehicleByFeatures",
+						"Everything",
+						"Loaded"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getVehicleByFeatures/{exterior}/{interior} - VehicleSearchParameterException",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8989/getVehicleByFeatures/su/Lig",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8989",
+					"path": [
+						"getVehicleByFeatures",
+						"su",
+						"Lig"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getVehiclePrice/{from}/{to}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8989/getVehiclePrice/25,000.00/35,000.00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8989",
+					"path": [
+						"getVehiclePrice",
+						"25,000.00",
+						"35,000.00"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getVehiclePrice/{from}/{to} - VehicleNotFoundException",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8989/getVehiclePrice/50,000.00/60,000.00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8989",
+					"path": [
+						"getVehiclePrice",
+						"50,000.00",
+						"60,000.00"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vehicleInfomation/submitVehicle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8989/vehicleInfomation/submitVehicle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8989",
+					"path": [
+						"vehicleInfomation",
+						"submitVehicle"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL_ENDPOINT",
+			"value": "",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}
